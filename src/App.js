@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import SignUpForm from './components/sign-up-form/sign-up-form.component';
+import SuccessScreen from './components/success-screen/success-screen.component';
+import { useContext } from 'react';
+import { AuthenticationContext } from './contexts/authentication.context';
 
-function App() {
+import './App.scss';
+
+const App = () => {
+  const { submissionSuccess } = useContext(AuthenticationContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="background-container">
+      {
+        !submissionSuccess ?
+          <SignUpForm/>
+          : <SuccessScreen/>
+      }
     </div>
   );
 }
