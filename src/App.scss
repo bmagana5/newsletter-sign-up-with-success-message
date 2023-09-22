@@ -10,14 +10,26 @@
   font-weight: 700;
 }
 
-.background-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: var(--charcoal-gray);
-  font-family: 'Roboto';
-  font-weight: 400;
-  color: var(--dark-slate-gray);
+@media only screen and (max-width: 500px) {
+  .background-container {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: var(--dark-slate-gray);
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--charcoal-gray);
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: var(--dark-slate-gray);
+  }
 }

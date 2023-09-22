@@ -1,13 +1,16 @@
 import { ReactComponent as IllustrationDesktop } from "../../assets/images/illustration-sign-up-desktop.svg";
+import { ReactComponent as IllustrationMobile } from "../../assets/images/illustration-sign-up-mobile.svg";
 import { ReactComponent as IconList } from "../../assets/images/icon-list.svg";
 import { useContext, useState } from 'react';
 import { AuthenticationContext } from "../../contexts/authentication.context";
+import { WindowDimensionsContext } from "../../contexts/window-dimensions.context";
 
 import "./sign-up-form.styles.scss";
 
 const SignUpForm = () => {
     const [isInvalidEmail, setIsInvalidEmail] = useState(false);
     const { email, setEmail, submissionSuccess, setSubmissionSuccess } = useContext(AuthenticationContext);
+    const { windowDimensions }= useContext(WindowDimensionsContext);
 
     const updateEmail = (event) => {
         isInvalidEmail && setIsInvalidEmail(!isInvalidEmail);
@@ -20,12 +23,18 @@ const SignUpForm = () => {
         if (email.match(emailRegex)) {
             !submissionSuccess && setSubmissionSuccess(!submissionSuccess);
         } else {
-            setIsInvalidEmail(!isInvalidEmail);
+            setIsInvalidEmail(true);
         }
     };
 
     return (
         <div className="main-container">
+            {
+                windowDimensions.width < 500
+                    && <div className="illustration-container">
+                        <IllustrationMobile className="illustration-svg" />
+                    </div>
+            }
             <div className="info-container">
                 <h1 className="header">Stay updated!</h1>
                 <div className="intro">
@@ -54,9 +63,12 @@ const SignUpForm = () => {
                     </button>
                 </form>
             </div>
-            <div className="illustration-container">
-                <IllustrationDesktop className="illustration-svg" />
-            </div>
+            {
+                windowDimensions.width >= 500
+                    && <div className="illustration-container">
+                        <IllustrationDesktop className="illustration-svg" />
+                    </div>
+            }
         </div>
     );
 };

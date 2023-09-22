@@ -1,102 +1,207 @@
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 500px;
-    width: 740px;
-    padding: 1rem;
-    background-color: var(--white);
-    border-radius: 2rem;
-
-    .info-container {
+@media only screen and (max-width: 500px) {
+    .main-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        width: 55%;
-        padding: 2rem;
-        font-size: .85rem;
-
-        .header {
-            margin: 0;
-            font-size: 2.75rem;
-            font-weight: 700;
-        }
-
-        .intro {
-            margin: 1rem 0;
-            line-height: 1.25rem;
-        }
-
-        .list {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            margin-bottom: 1.5rem;
-
-            .list-item {
-                display: flex;
-                align-items: center;
-                margin-bottom: .5rem;
-
-                svg {
-                    margin-right: .75rem;
-                }
-            }
-        }
-
-        .email-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            label {
-                display: flex;
-                justify-content: space-between;
-                font-weight: 700;
-                font-size: .7rem;
-                margin-bottom: .5rem;
-
-                .email-error-msg {
-                    color: var(--tomato);
-                }
-            }
-
-            input {
-                padding: 1rem;
-                border: 1px solid var(--gray);
-                border-radius: .5rem;
-
-                &.error {
-                    border: 1px solid var(--tomato);
-                    color: var(--tomato);
-                    background-color: hsl(4, 100%, 94%);
-                    outline: solid 1px var(--tomato);
-                }
-
-                &.error:focus {
-                    border: 1px solid var(--tomato);
-                    outline: solid 1px var(--tomato);
-                }
-            }
-
-            button {
-                padding: 1rem 0;
-                margin-top: 1rem;
-                background-color: var(--dark-slate-gray);
-                border-radius: .5rem;
-                color: var(--white);
-            }
-        }
-
-    }
-
-    .illustration-container {
-        width: 45%;
+        align-items: center;
         height: 100%;
+        width: 100%;
+        background-color: var(--white);
 
-        .illustration-svg {
+        .illustration-container {
+            min-width: 100%;
+            .illustration-svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .info-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+    
+            .header {
+                margin: 0;
+                font-size: 2.75rem;
+                font-weight: 700;
+            }
+    
+            .intro {
+                // margin: 1rem 0;
+                line-height: 1.25rem;
+            }
+    
+            .list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                // margin-bottom: 1.5rem;
+    
+                .list-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: .5rem;
+                    height: 33%;
+    
+                    svg {
+                        margin-right: .75rem;
+                    }
+                }
+            }
+    
+            .email-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                label {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 700;
+                    font-size: .7rem;
+                    margin-bottom: .5rem;
+    
+                    .email-error-msg {
+                        color: var(--tomato);
+                    }
+                }
+    
+                input {
+                    padding: 1rem;
+                    border: 1px solid var(--gray);
+                    border-radius: .5rem;
+    
+                    &.error {
+                        border: 1px solid var(--tomato);
+                        color: var(--tomato);
+                        background-color: hsl(4, 100%, 94%);
+                        outline: solid 1px var(--tomato);
+                    }
+    
+                    &.error:focus {
+                        border: 1px solid var(--tomato);
+                        outline: solid 1px var(--tomato);
+                    }
+                }
+    
+                button {
+                    padding: 1rem 0;
+                    margin-top: 1rem;
+                    margin-bottom: .5rem;
+                    background-color: var(--dark-slate-gray);
+                    border-radius: .5rem;
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 500px;
+        max-width: 740px;
+        padding: 1rem;
+        background-color: var(--white);
+        border-radius: 2rem;
+    
+        .info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 55%;
+            padding: 2rem;
+            font-size: .85rem;
+    
+            .header {
+                margin: 0;
+                font-size: 2.75rem;
+                font-weight: 700;
+            }
+    
+            .intro {
+                margin: 1rem 0;
+                line-height: 1.25rem;
+            }
+    
+            .list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin-bottom: 1.5rem;
+    
+                .list-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: .5rem;
+    
+                    svg {
+                        margin-right: .75rem;
+                    }
+                }
+            }
+    
+            .email-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                label {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 700;
+                    font-size: .7rem;
+                    margin-bottom: .5rem;
+    
+                    .email-error-msg {
+                        color: var(--tomato);
+                    }
+                }
+    
+                input {
+                    padding: 1rem;
+                    border: 1px solid var(--gray);
+                    border-radius: .5rem;
+    
+                    &.error {
+                        border: 1px solid var(--tomato);
+                        color: var(--tomato);
+                        background-color: hsl(4, 100%, 94%);
+                        outline: solid 1px var(--tomato);
+                    }
+    
+                    &.error:focus {
+                        border: 1px solid var(--tomato);
+                        outline: solid 1px var(--tomato);
+                    }
+                }
+    
+                button {
+                    padding: 1rem 0;
+                    margin-top: 1rem;
+                    background-color: var(--dark-slate-gray);
+                    border-radius: .5rem;
+                    color: var(--white);
+                }
+            }
+    
+        }
+    
+        .illustration-container {
+            width: 45%;
             height: 100%;
+    
+            .illustration-svg {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
