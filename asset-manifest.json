@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/newsletter-sign-up-with-success-message/static/css/main.3de3383d.css",
-    "main.js": "/newsletter-sign-up-with-success-message/static/js/main.3ae8a2bf.js",
+    "main.css": "/newsletter-sign-up-with-success-message/static/css/main.76cb7f09.css",
+    "main.js": "/newsletter-sign-up-with-success-message/static/js/main.e80bb37e.js",
     "static/media/Roboto-Regular.ttf": "/newsletter-sign-up-with-success-message/static/media/Roboto-Regular.160d7a6ac26376e5e977.ttf",
     "static/media/Roboto-Bold.ttf": "/newsletter-sign-up-with-success-message/static/media/Roboto-Bold.35eab922fdbe4b5324d4.ttf",
+    "static/media/illustration-sign-up-mobile.svg": "/newsletter-sign-up-with-success-message/static/media/illustration-sign-up-mobile.3f6f1c6d3e48045cb31a0cae1ae11999.svg",
     "static/media/illustration-sign-up-desktop.svg": "/newsletter-sign-up-with-success-message/static/media/illustration-sign-up-desktop.ce2024babf0bc98a8862252535b544c9.svg",
     "index.html": "/newsletter-sign-up-with-success-message/index.html",
     "static/media/icon-list.svg": "/newsletter-sign-up-with-success-message/static/media/icon-list.5e317c030bb9f11a33433484a2c590e1.svg",
-    "main.3de3383d.css.map": "/newsletter-sign-up-with-success-message/static/css/main.3de3383d.css.map",
-    "main.3ae8a2bf.js.map": "/newsletter-sign-up-with-success-message/static/js/main.3ae8a2bf.js.map"
+    "main.76cb7f09.css.map": "/newsletter-sign-up-with-success-message/static/css/main.76cb7f09.css.map",
+    "main.e80bb37e.js.map": "/newsletter-sign-up-with-success-message/static/js/main.e80bb37e.js.map"
   },
   "entrypoints": [
-    "static/css/main.3de3383d.css",
-    "static/js/main.3ae8a2bf.js"
+    "static/css/main.76cb7f09.css",
+    "static/js/main.e80bb37e.js"
   ]
 }
